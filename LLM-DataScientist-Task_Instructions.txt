@@ -1,0 +1,106 @@
+-------------
+Overview.   |
+-------------
+
+You have been given a dataset of user messages sourced from LiveChat and Telegram. Each record in the dataset contains:
+	- id_user: A unique identifier for the user
+	- timestamp: The time the feedback was received
+	- source: The platform (livechat or telegram)
+	- message: The user’s message (e.g., “I am unable to access the site from the US.”)
+Your goal is to analyze and classify these messages, then develop a chatbot that can respond to natural language queries with meaningful insights.
+
+-------------
+Objectives. |
+-------------
+
+Message Classification:
+ - Define at least five categories that capture different types of user issues (e.g., “freespins issues,” “game issues,” etc.).
+ - Ensure the categories reflect actionable outcomes (e.g., issues that can be escalated to a relevant team).
+ - You may disregard messages that do not contain useful information.
+Chatbot Design:
+ - The chatbot should support the following capabilities:
+   - Dynamic Filtering:
+   	- Allow filtering of messages by category, time range, and source.
+	- Example queries:
+		- “Login issues reported in the last month”
+		- “Telegram game issues”
+		- “Game issues via LiveChat in the last month”
+Statistical Insights:
+ - Provide key metrics such as:
+   - Number of messages matching a given category, source, or timeframe
+   - Number of unique users for a given category, source, or timeframe
+   - (Bonus) Detect spikes in a specific category within a given timeframe (i.e., identify when an issue started escalating).
+Conversational Memory
+ - Retain context from previous queries.
+   - Example:
+	- User: “Telegram deposit issues in the previous month?”
+	- Chatbot: (returns stats)
+	- User: “What about LiveChat?”
+	- (The chatbot should recall that the user is interested in "deposit issues in the previous month" and only change the source to LiveChat.)
+
+--------------
+Requirements.|
+--------------
+
+Classification:
+	- Implement a method to categorize the messages.
+Natural Language Filtering:
+	- Support filtering based on time range and source.
+Conversational Memory:
+	- Retain context from previous user queries.
+Follow-Up Modifications
+	- Allow incremental refinement of queries (e.g., changing only the source while keeping the category and time range).
+
+--------------
+Constraints. |
+--------------
+
+Prohibited: 
+	- Use of any pre-built conversational agent frameworks.
+Allowed:
+	- Any NLP model (e.g., OpenAI’s API, Hugging Face Transformers)
+	- Python
+Deployment:
+	- Code must be pushed to a GitHub repository.
+	- A README with clear setup instructions must be provided.
+
+---------------
+Bonus Points. |
+---------------
+
+
+- Implement a simple interface for chatbot interactions rather than a purely terminal-based interface.
+- Detect or handle messages that could reasonably fall into multiple categories.
+- Identify and highlight patterns or trends over time (e.g., seasonal spikes in certain categories).
+
+----------------------
+Evaluation Questions.|
+----------------------
+
+When submitting your solution, please address the following in your README or documentation:
+- How did you classify feedback (Describe your methodology: rule-based, machine learning, hybrid. Discuss advantages, drawbacks, and how you would handle new, previously unseen issues, such as a new wallet blocking deposits).
+- How does your chatbot manage conversational context?
+- What are the main limitations? (e.g., vague feedback, multi-category overlaps, conversational memory constraints.)
+- How could the system be improved?
+- Explain how the chatbot tracks and utilizes past queries to refine current requests.
+- If the entire conversation were provided (not just a single response, but a full exchange with a support agent), would you approach this task differently? (Explain how.)
+- How would you measure and validate the correctness of message classifications?
+
+
+------------------------
+Submission Guidelines. |
+------------------------
+
+GitHub Repository
+	- Provide the link to your GitHub repository containing the code.
+	- Include a clear README with setup and usage instructions.
+Documentation
+	- Answer the Evaluation Questions in detail in your README.
+	- If UI is built, provide a link or instructions for local deployment.
+
+
+-----------------
+Additional info.|
+-----------------
+
+If you want to use OpenAI, write to ziga.trojer@5element.si for API key.
