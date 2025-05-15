@@ -14,8 +14,8 @@ It is built to process records in a dataset that contains:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-name>
+git clone git@github.com:jutranjo/CategorizeAndChatbot.git
+cd CategorizeAndChatbot
 ```
 ---
 ### 2. Create and Activate a Virtual Environment
