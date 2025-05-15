@@ -2,7 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import umap
 from sentence_transformers import SentenceTransformer
-from mpl_toolkits.mplot3d import Axes3D
 
 # Load data
 df = pd.read_csv('LLM-DataScientist-Task_Data.csv')
